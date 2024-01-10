@@ -57,8 +57,10 @@ def main():
         explained_code = explain_code(code_input, option)
 
         # Display the commented code in a separate text widget
-        st.text_area("Code with Comments:", value=commented_code, height=200)
+        st.write("Commented code:")
+        st.code(commented_code)
         if explaintoggle:
-            st.text_area("Explained code:", value=explained_code, height=200)
+            st.write("Explanation: ")
+            st.write(explained_code)
 
 main()
