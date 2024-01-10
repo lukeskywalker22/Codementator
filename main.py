@@ -1,10 +1,12 @@
+# load libraries
+
 import warnings
 warnings.filterwarnings('ignore')
 
 import os
 from dotenv import load_dotenv, find_dotenv
 
-# load langchain libraries
+# load libraries
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts.chat import ChatPromptTemplate
@@ -23,22 +25,27 @@ print(openai_api_key)
 llm = ChatOpenAI(
     openai_api_key=openai_api_key
 )
+
 print("initialized successfully")
 
-def add_comments_to_code(input_code):
-    query = "Add comments to the following python code: " + input_code
+def add_comments_to_code(input_code, language):
+    query = "Add comments to the following " + language + " code while preserving the structure of the original code: " + input_code
     message = [HumanMessage(content=query)]
     return llm.invoke(message).content
 
 # Streamlit app layout
 def main():
-    st.title("Code Commenter App")
+    st.title("Codementator")
+    st.write("The only app you'll ever need to write code comments")
+    st.write("Documentation: [GitHub](https://github.com/lukeskywalker22/Codementator/tree/main)")
+
+    option = st.selectbox('Select programming language',('Python', 'Javascript', 'C', 'Java', 'Swift', 'Typescript', 'Rust', 'Ruby', 'CSS', 'HTML', 'C++'))
     code_input = st.text_area("Enter your code snippet:", height=200)
 
     # Button to trigger code commenting (not functional in this template)
     if st.button("Add Comments"):
         # Perform code commenting (replace with actual logic)
-        commented_code = add_comments_to_code(code_input)
+        commented_code = add_comments_to_code(code_input, option)
 
         # Display the commented code in a separate text widget
         st.text_area("Code with Comments:", value=commented_code, height=200)
