@@ -30,7 +30,7 @@ def generate_code(language, length, question):
     message = [HumanMessage(content=query)]
     return llm.invoke(message).content 
 
-st.set_page_config(page_title="Code generator")
+st.set_page_config(page_title="Code Generator")
 
 st.markdown("# Code generator")
 st.write(
