@@ -64,7 +64,7 @@ def main():
         temp = st.slider(label="Temperature (randomness of text generation: 0 is least, 2 is most)", min_value=0.0, max_value=2.0, value=1.0)      
         frequency = st.selectbox('Frequency', ('Add comments to code', 'Add comments to every line of code', 'Remove all comments'))
 
-    option = st.selectbox('Select programming language',('Python', 'Javascript', 'C', 'Java', 'Swift', 'Typescript', 'Rust', 'Ruby', 'CSS', 'HTML', 'C++'))
+    option = st.selectbox('Select programming language',('Python', 'Javascript', 'C', 'Java', 'Swift', 'Typescript', 'Rust', 'Ruby', 'CSS', 'HTML', 'C++', "C#"))
     explaintoggle = st.toggle("Explain mode")
     insulttoggle = st.toggle("Insult my code")
     code_input = st.text_area("Enter your code snippet:", height=300)
