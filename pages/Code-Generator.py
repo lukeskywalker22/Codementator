@@ -26,7 +26,7 @@ llm = ChatOpenAI(
 )
 
 def generate_code(language, length, question):
-    query = "Generate a snippet of code in the " + language + " programming language that performs " + question + "with a maximum length of " + length + "."  
+    query = "Generate a snippet of code in the " + language + " programming language that performs " + question + "with a maximum length of " + length + ". Do not include any explanations, just generate the code snippet only."  
     message = [HumanMessage(content=query)]
     return llm.invoke(message).content 
 
