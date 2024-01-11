@@ -5,6 +5,7 @@ Codementator is a helpful AI assistant to assist you while you code, either with
 1. In the same folder, add a text file with your OpenAI API Key (OPENAI_API_KEY="sk-1234..") and name it `env.txt`.
 2. Run the file and then type `streamlit run [file_name].py` in terminal.
 
+or you can access it at https://codementator.streamlit.app/Code-Generator
 
 ## Utilising it:
 # Code Commentator
@@ -29,3 +30,4 @@ The code generator allows you to generate code in whatever language you'd like.
 
 ## How it works:
 Our code commentator makes use LangChain to access GPT-3.5 to indepthly explain and annotate code. 
+
