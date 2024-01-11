@@ -44,6 +44,12 @@ def explain_code(input_code, language, temperature):
     message = [HumanMessage(content=query)]
     return llm.invoke(message).content 
 
+def insult_code(input_code, language, temperature):
+    llm.temperature = temperature
+    query = "Insult the following " + language + "code: " + input_code
+    message = [HumanMessage(content=query)]
+    return llm.invoke(message).content
+
 # Streamlit app layout
 def main():
     #Main screen
@@ -57,6 +63,7 @@ def main():
 
     option = st.selectbox('Select programming language',('Python', 'Javascript', 'C', 'Java', 'Swift', 'Typescript', 'Rust', 'Ruby', 'CSS', 'HTML', 'C++'))
     explaintoggle = st.toggle("Explain mode")
+    insulttoggle = st.toggle("Insult my code")
     code_input = st.text_area("Enter your code snippet:", height=300)
 
     # Button to trigger code commenting (not functional in this template)
@@ -71,5 +78,8 @@ def main():
         if explaintoggle:
             st.write("Explanation: ")
             st.write(explained_code)
+        if insulttoggle:
+            st.write("Insults to code:")
+            st.write(insult_code)
     
 main()
