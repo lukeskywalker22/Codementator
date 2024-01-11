@@ -1,7 +1,9 @@
 # Codementator
 Codementator is a helpful AI assistant to assist you while you code, either with friends or solo. The AI helps you add important comments to aid other collaborators in understanding your ~~incomprehensible~~ code. It can also be used to explain the code indepthly.
 
-To run the code, run the file and then type `streamlit run [file_name].py`.
+<ins>To run the code</ins>:
+1. In the same folder, add a text file with your OpenAI API Key (OPENAI_API_KEY="sk-1234..") and name it `env.txt`.
+2. Run the file and then type `streamlit run [file_name].py` in terminal.
 
 
 ## Utilising it:
