@@ -71,6 +71,7 @@ def main():
         # Perform code commenting (replace with actual logic)
         commented_code = add_comments_to_code(code_input, option, frequency)
         explained_code = explain_code(code_input, option, temp)
+        insulted_code = insult_code(code_input, option, temp)
 
         # Display the commented code in a separate text widget
         st.write("Commented code:")
@@ -80,6 +81,6 @@ def main():
             st.write(explained_code)
         if insulttoggle:
             st.write("Insults to code:")
-            st.write(insult_code)
+            st.write()
     
 main()
