@@ -46,7 +46,7 @@ def explain_code(input_code, language, temperature):
 
 def insult_code(input_code, language, temperature):
     llm.temperature = temperature
-    query = "Insult the following " + language + "code: " + input_code
+    query = "Say some funny insults to the following " + language + "code: " + input_code
     message = [HumanMessage(content=query)]
     return llm.invoke(message).content
 
