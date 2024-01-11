@@ -53,8 +53,8 @@ def main():
     st.write("Documentation: [GitHub](https://github.com/lukeskywalker22/Codementator/tree/main)")
 
     with st.expander("Advanced options", expanded=False):
-        temp = st.slider(label="Temperature (randomness of text generation: 0->least, 2->most)", min_value=0.0, max_value=2.0, value=1.0)
-        frequency = st.slider(label="Frequency (frequency of labels added: -1 -> removes all prior comments in code, 1 -> adds a comment for each line of code)", min_value=-1, max_value=1, value=0)       
+        temp = st.slider(label="Temperature (randomness of text generation: 0 is least, 2 is most)", min_value=0.0, max_value=2.0, value=1.0)
+        frequency = st.slider(label="Frequency (frequency of labels added: -1 removes all prior comments in code, 1 adds a comment for each line of code. Leave value as 0 to provide default level of comments)", min_value=-1, max_value=1, value=0)       
 
     option = st.selectbox('Select programming language',('Python', 'Javascript', 'C', 'Java', 'Swift', 'Typescript', 'Rust', 'Ruby', 'CSS', 'HTML', 'C++'))
     explaintoggle = st.toggle("Explain mode")
