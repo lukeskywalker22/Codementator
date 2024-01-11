@@ -81,6 +81,6 @@ def main():
             st.write(explained_code)
         if insulttoggle:
             st.write("Insults to code:")
-            st.write()
+            st.write(insulted_code)
     
 main()
