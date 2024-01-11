@@ -83,7 +83,7 @@ def main():
             st.write("Explanation: ")
             st.write(explained_code)
         if insulttoggle:
-            if random.randint(0, 100) < 3:
+            if random.randint(0, 100) < 6:
                 st.write(copypasta)
             else:
                 st.write("Insults:")
