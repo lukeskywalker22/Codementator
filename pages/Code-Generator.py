@@ -11,12 +11,8 @@ from langchain.prompts.chat import ChatPromptTemplate
 from langchain.schema import HumanMessage
 
 import streamlit as st
-from streamlit_modal import Modal
-
-basedirectory = os.path.dirname(__file__)
 
 # load OPENAI API key
-load_dotenv(os.path.join(os.path.dirname(__file__), "env.txt"))
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
 # initialise ChatModel with API key
