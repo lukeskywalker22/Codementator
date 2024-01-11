@@ -30,9 +30,9 @@ print("initialized successfully")
 
 def add_comments_to_code(input_code, language, frequency):
     if frequency == 'Add comments to code':
-        query = "Add comments to the following " + language + " code while preserving the structure of the original code and leaving the code inside the response: " + input_code
+        query = "Add comments to the following " + language + " code while preserving the structure of the original code and leaving all of the original content inside the response: " + input_code
     elif frequency == 'Add comments to every line of code':
-        query = "Add comments to every line of the following" + language + "code while preserving the structure of the original code and leaving the code inside the response: " + input_code
+        query = "Add comments to every line of the following" + language + "code while preserving the structure of the original code and leaving all of the original content inside the response: " + input_code
     else:
         query = "Remove all comments from the following code: " + input_code 
     message = [HumanMessage(content=query)]
