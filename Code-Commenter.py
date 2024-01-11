@@ -47,7 +47,6 @@ def explain_code(input_code, language, temperature):
 
 # Streamlit app layout
 def main():
-    sidebar = st.sidebar
     #Main screen
     st.title("Codementator")
     st.write("The only app you'll ever need to write code comments")

@@ -39,7 +39,7 @@ st.write(
     
 option = st.selectbox('Select programming language',('Python', 'Javascript', 'C', 'Java', 'Swift', 'Typescript', 'Rust', 'Ruby', 'CSS', 'HTML', 'C++'))
 code_input = st.text_area("Enter your query:", height=100)
-length_input = st.text_area("Enter max length of code generated")
+length_input = st.text_area("Enter max length of code generated in characters")
 if st.button("Generate code"):
     generated_code = generate_code(option, length_input, code_input)
     st.code(generated_code)
